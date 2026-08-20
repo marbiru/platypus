@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platypus, Mermaid, Person</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#26302f;
+    --soft:#5c6b68;
+    --accent:#2f7d6b;
+    --accent-deep:#1f5a4d;
+    --line:rgba(38,48,47,.14);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    min-height:100vh;
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:18px;
+    line-height:1.6;
+    /* soft three-tone wash: sand (platypus) -> sea (mermaid) -> rose (person) */
+    background:
+      radial-gradient(120% 90% at 12% 8%, #f2ead9 0%, rgba(242,234,217,0) 55%),
+      radial-gradient(120% 90% at 88% 22%, #e2efe8 0%, rgba(226,239,232,0) 55%),
+      radial-gradient(130% 100% at 70% 100%, #f4e6e6 0%, rgba(244,230,230,0) 60%),
+      #eef1ea;
+    background-attachment:fixed;
+    display:flex;
+    justify-content:center;
+    padding:clamp(2rem,6vw,5rem) 1.25rem;
+  }
+  main{
+    width:100%;
+    max-width:640px;
+  }
+  h1{
+    font-family:"Fraunces",Georgia,serif;
+    font-weight:600;
+    font-optical-sizing:auto;
+    font-size:clamp(2.4rem,7vw,3.6rem);
+    line-height:1.05;
+    letter-spacing:-.01em;
+    margin:0 0 1.5rem;
+  }
+  .intro{
+    font-size:clamp(1.15rem,2.6vw,1.35rem);
+    margin:0 0 2.75rem;
+    color:var(--ink);
+  }
+  section{
+    padding:1.6rem 0;
+    border-top:1px solid var(--line);
+  }
+  section p{margin:0;}
+  a{
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid rgba(47,125,107,.35);
+    transition:color .15s ease,border-color .15s ease;
+    word-break:break-word;
+  }
+  a:hover{color:var(--accent-deep);border-bottom-color:var(--accent-deep);}
+  a:focus-visible{
+    outline:2px solid var(--accent-deep);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+  .signoff{
+    font-style:italic;
+    color:var(--soft);
+  }
+  @media (prefers-reduced-motion:reduce){
+    a{transition:none;}
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Platypus, Mermaid, Person</h1>
+  <p class="intro">Thank you so much for attending my talk!</p>
+
+  <section>
+    <p>You can read Eugene McCarthy's own work directly on <a href="https://www.macroevolution.net/">macroevolution.net</a></p>
+  </section>
+
+  <section>
+    <p>You can listen to some podcast interviews with him <a href="https://www.listennotes.com/search/?ocid=6df95b2450544f3e946c0da1d4252bb9&q=eugene+mccarthy">here</a>.</p>
+  </section>
+
+  <section>
+    <p>I've previously written about the Chimp-Pig Hypothesis at <a href="https://www.atvbt.com/the-chimp-pig-hypothesis/">atvbt.com</a>.</p>
+  </section>
+
+  <section>
+    <p>About me: you can see more of my work at <a href="https://uribram.com">uribram.com</a>, or check out my <a href="https://www.amazon.com/dp/B0FST4LFNH">boardgame on Amazon</a>.</p>
+  </section>
+
+  <section>
+    <p class="signoff">And finally… don't forget to sign up for <a href="https://nyc.nerdnite.com/">Nerd Nite updates</a> — scientifically proven to be the greatest event series in the history of the world.</p>
+  </section>
+</main>
+</body>
+</html>
